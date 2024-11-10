@@ -1,0 +1,31 @@
+.button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.playBtn {
+    background-color: #E9E9E9;
+    font-size: 20px;
+
+    &:hover{
+        background-color: #A7A7A7;
+    }
+}
+
+.moreInfoBtn {
+    background-color: #767677c0;
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+        background-color: #535353;
+    }
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 24px;
+}
