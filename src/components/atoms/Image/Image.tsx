@@ -3,7 +3,7 @@ import styles from './Image.module.css'
 
 interface Imageprops{
     src: string,
-    alt: string,
+    alt?: string,
     className?: string,
 }
 
