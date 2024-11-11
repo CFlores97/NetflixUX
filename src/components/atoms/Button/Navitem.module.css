@@ -1,0 +1,65 @@
+.navitem {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #A7A7A7;
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navitem:hover {
+    color: #797979;
+}
+
+.listItem {
+    list-style: none;
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+.image {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.text{
+    
+}
+
+@media (max-width: 768px) {
+    .navitem {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .icon, .image {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navitem {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .icon, .image {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+    }
+
+    .text {
+        display: none; 
+    }
+}

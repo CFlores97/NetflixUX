@@ -1,0 +1,100 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.724);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    padding: 10px 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #E50914;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.profileItems {
+    display: flex;
+    right: 0;
+    position: absolute;
+}
+.hamburger {
+    display: none; 
+    font-size: 1.5rem;
+    color: #A7A7A7;
+    cursor: pointer;
+    position: fixed;
+    right: 10px; 
+}
+
+@media (max-width: 1130px) {
+
+    .menu {
+        display: none;
+    }
+    
+    .navbar {
+        padding: 8px 16px;
+    }
+
+    .profileItems {
+        display: none;
+    }
+
+    .navitem {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .icon,
+    .image {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+
+    .profileItems {
+        display: none;
+    }
+
+    .navitem {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .icon,
+    .image {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+    }
+
+    .navitem .text {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+  
+}

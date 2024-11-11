@@ -25,6 +25,10 @@
     }
 }
 
+.searchBtn {
+    background-color: #00000000;
+}
+
 .icon {
     margin-right: 8px;
     font-size: 24px;
