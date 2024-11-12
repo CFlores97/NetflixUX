@@ -3,10 +3,17 @@ import Miniature from '../molecules/Miniature/Miniature';
 import styles from './MiniatureRow.module.css'
 import Title from '../atoms/Title/Title';
 
+interface Mini {
+  img: string;
+  gif?: string;
+  title?: string;
+  loaded?: number;
+}
+
 interface MiniatureProps {
-    title: string;
-    movies: Array<string>;
-  }
+  title: string;
+  movies: Array<Mini>;
+}
 
 const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies }) => {
   const rowRef = useRef<HTMLDivElement>(null);
@@ -25,8 +32,13 @@ const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies }) => {
       <div className={styles.row__controls}>
         <button onClick={scrollLeft}>{"<"}</button>
         <div className={styles.row__posters} ref={rowRef}>
-          {movies.map((movie) => (
-            <Miniature img={movie}>
+          {movies.map((movie, index) => (
+            <Miniature
+              key={index}
+              img={movie.img}
+              gif={movie.gif}
+              title={movie.title}
+              loaded={movie.loaded}>
             </Miniature>
           ))}
         </div>
