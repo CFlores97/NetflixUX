@@ -1,3 +1,7 @@
 #root{
     background-color: #111;
 }
+
+html{
+    scroll-behavior: smooth;
+}

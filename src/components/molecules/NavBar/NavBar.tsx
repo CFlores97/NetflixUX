@@ -16,12 +16,12 @@ const NavBar: React.FC = () => {
         <nav className={styles.navbar}>
             <div className={styles.logo}>Netflix</div>
             <div className={styles.menu}>
-                <Navitem text="Inicio"></Navitem>
-                <Navitem text="Series"></Navitem>
-                <Navitem text="Peliculas"></Navitem>
-                <Navitem text="Novedades populares"></Navitem>
-                <Navitem text="Mi lista"></Navitem>
-                <Navitem text="Explora por idiomas"></Navitem>
+                <Navitem text="Inicio" to="#"></Navitem>
+                <Navitem text="Nuevo en Netflix" to="#Nuevo"></Navitem>
+                <Navitem text="Seguir Viendo" to="#seguirViendo"></Navitem>
+                <Navitem text="Para Ti" to="#paraTi"></Navitem>
+                <Navitem text="Tendencias" to="#Tendencias"></Navitem>
+                <Navitem text="Aclamados por la Critica" to="#Aclamado"></Navitem>
             </div>
             <div className={styles.profileItems}>
                 <Navitem icon={faMagnifyingGlass} />

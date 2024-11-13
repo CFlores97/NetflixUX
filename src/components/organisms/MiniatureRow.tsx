@@ -13,9 +13,10 @@ interface Mini {
 interface MiniatureProps {
   title: string;
   movies: Array<Mini>;
+  id: string;
 }
 
-const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies }) => {
+const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies, id}) => {
   const rowRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -27,7 +28,7 @@ const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies }) => {
   };
 
   return (
-    <div className={styles.row}>
+    <div className={styles.row} id={id}>
       <Title text={title}></Title>
       <div className={styles.row__controls}>
         <button onClick={scrollLeft}>{"<"}</button>

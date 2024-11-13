@@ -87,7 +87,7 @@ function App() {
       img: "https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQcEYlpVxc0dAXF-droDwz2tLB0CX896_A0gI2j-ZACj6hlQeQ5tzN6KaQeOcDu8AnVw--SbzxTmXY062HXxbfXWcZzxL-k-nKehakoMgikhE_p9SocvQiiWNFV07xej81o6WhWYtU4g7s0yM1-bkSMiW.jpg?r=47d",
       gif: "https://media1.giphy.com/media/RN7sS7I1mp4JHknwDF/giphy.gif?cid=6c09b9528v2bwyn5z0st6b16go2bvi3je6fi28oogm0oly34&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g",
       title: "Queer Eye",
-      loaded: 0,
+      loaded: 15,
     },
     
 
@@ -98,7 +98,7 @@ function App() {
       img: "https://m.media-amazon.com/images/M/MV5BMmRlNjQxNWQtMjk1OS00N2QxLTk0YWQtMzRhYjY5YTFhNjMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
       gif: "https://media4.giphy.com/media/32dfpYx8kBX1bXSEu8/giphy.gif?cid=6c09b952rzm83ng07iviyotmql8e3xh1c05484xg1z9ohgdk&ep=v1_gifs_search&rid=giphy.gif&ct=g",
       title: "Queens Gambit",
-      loaded: 70,
+      loaded: 0,
     },
     {
       img: "https://m.media-amazon.com/images/I/81E9pxWGJPL._AC_UF1000,1000_QL80_.jpg",
@@ -254,12 +254,11 @@ function App() {
   return (
     <>
       <Banner title="N°1 Mundial" description="Un profesor de química con cáncer terminal se asocia con un exalumno suyo para fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos" backgroundImage="https://media1.giphy.com/media/R3S6MfUoKvBVS/giphy.gif?cid=6c09b952kgykirfcchy5medxozeo381x5prfia346wsldndx&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" />
-      <MiniatureRow title="Nuevo en Netflix" movies={nuevoEnNetflix} />
-      <MiniatureRow title="Seguir Viendo" movies={seguirViendo} />
-      <MiniatureRow title="Para ti" movies={paraTi} />
-      <MiniatureRow title="Tendencia Ahora" movies={tendenciaAhora} />
-      <MiniatureRow title="Aclamado por la critica" movies={critica} />
-
+      <MiniatureRow title="Nuevo en Netflix" movies={nuevoEnNetflix} id="Nuevo"/>
+      <MiniatureRow title="Seguir Viendo" movies={seguirViendo} id="seguirViendo"/>
+      <MiniatureRow title="Para ti" movies={paraTi} id="paraTi" />
+      <MiniatureRow title="Tendencia Ahora" movies={tendenciaAhora} id="Tendencias" />
+      <MiniatureRow title="Aclamado por la critica" movies={critica} id="Aclamado" />
     </>
 
   );
