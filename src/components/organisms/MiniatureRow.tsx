@@ -16,7 +16,7 @@ interface MiniatureProps {
   id: string;
 }
 
-const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies, id}) => {
+const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies, id }) => {
   const rowRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -27,9 +27,11 @@ const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies, id}) => {
     if (rowRef.current) rowRef.current.scrollLeft += 300;
   };
 
+  const mostrarProgressBar = title === "Seguir Viendo";
+
   return (
     <div className={styles.row} id={id}>
-      <Title text={title}></Title>
+      <Title text={title} />
       <div className={styles.row__controls}>
         <button onClick={scrollLeft}>{"<"}</button>
         <div className={styles.row__posters} ref={rowRef}>
@@ -39,8 +41,9 @@ const MiniatureRow: React.FC<MiniatureProps> = ({ title, movies, id}) => {
               img={movie.img}
               gif={movie.gif}
               title={movie.title}
-              loaded={movie.loaded}>
-            </Miniature>
+              loaded={movie.loaded}
+              showProgressBar={mostrarProgressBar}
+            />
           ))}
         </div>
         <button onClick={scrollRight}>{">"}</button>

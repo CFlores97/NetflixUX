@@ -10,9 +10,13 @@ interface Mini {
 
 }
 
-const Miniature: React.FC<Mini> = ({ img, title, loaded, gif }) => {
+interface MiniatureProps extends Mini {
+    showProgressBar?: boolean;
+}
+
+const Miniature: React.FC<MiniatureProps> = ({ img, title, loaded, gif, showProgressBar }) => {
     const progress = loaded !== undefined ? loaded : Math.floor(Math.random() * 100);
-    
+
     return (
         <>
             <div className={styles.container}>
@@ -20,10 +24,14 @@ const Miniature: React.FC<Mini> = ({ img, title, loaded, gif }) => {
                     <Image src={img} alt={title || "Miniature"} className={styles.staticImage} />
                     {gif && <img src={gif} alt={`${title} GIF`} className={styles.gifImage}></img>}
                 </div>
+                {showProgressBar && (
+                    <div className={styles.progressBar}>
+                        <div className={styles.progress} style={{ width: `${progress}%` }}></div>
+                    </div>
+                )}
             </div>
-            <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: `${progress}%` }}></div>
-            </div>
+
+
         </>
     );
 }
